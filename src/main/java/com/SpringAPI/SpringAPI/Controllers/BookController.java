@@ -30,12 +30,17 @@ public class BookController {
         return bookService.getBookById(id);
     }
 
+    //craete new book
     @PostMapping("/books")
            public Book addBook(@RequestBody Book book){
         Book b =this.bookService.addBook(book);
         return book;
+    }
+    //delete book
+    @DeleteMapping("/books/{bookID}")
+    public  void deleteBook(@PathVariable("/bookID") int bookID){
+        this.bookService.deleteBook(bookID);
 
+    }
 
-
-           }
 }
