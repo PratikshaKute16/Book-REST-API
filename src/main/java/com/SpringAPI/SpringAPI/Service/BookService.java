@@ -22,9 +22,15 @@ public class BookService {
     }
     //get single book by id
                 public Book getBookById(int id){
-                     Book book;
+                     Book book = null;
                     book = list.stream().filter(e->e.getId()==id).findFirst().get();
                     return book;
                 }
+
+                //Adding the book
+    public Book addBook(Book book){
+         list.add(book);
+         return book;
+    }
 
 }
