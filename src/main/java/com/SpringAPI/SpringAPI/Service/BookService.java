@@ -1,10 +1,12 @@
 package com.SpringAPI.SpringAPI.Service;
 
 import com.SpringAPI.SpringAPI.Entities.Book;
+import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
 import java.util.List;
 
+@Component
 public class BookService {
      private static List<Book> list=new ArrayList<>();
      static {
@@ -15,7 +17,7 @@ public class BookService {
      }
      //get all books
 
-    public static List<Book> getAllList() {
+    public static List<Book> getAllBooks() {
         return list;
     }
     //get single book by id
