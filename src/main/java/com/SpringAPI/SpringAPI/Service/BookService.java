@@ -2,6 +2,7 @@ package com.SpringAPI.SpringAPI.Service;
 
 import com.SpringAPI.SpringAPI.Entities.Book;
 import org.springframework.stereotype.Component;
+import org.springframework.web.bind.annotation.DeleteMapping;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -39,5 +40,14 @@ public class BookService {
     public void deleteBook(int id){
          list=list.stream().filter(book->book.getId()!=id).collect(Collectors.toList());
     }
-
+// update book
+               public void updateBook(Book book,int bookid) {
+                   list = list.stream().map(b -> {
+                       if (b.getId() == bookid) {
+                           b.setName(book.getName());
+                           b.setAuthor((book.getAuthor()));
+                       }
+                       return b;
+                   }).collect(Collectors.toList());
+               }
 }
