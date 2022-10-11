@@ -37,15 +37,15 @@ public class BookController {
         return book;
     }
     //delete book
-    @DeleteMapping("/books/{bookID}")
-    public Book deleteBook(@PathVariable("/bookID") int bookID){
-        this.bookService.deleteBook(bookID);
-        return book;
+    @DeleteMapping("/books/{bookId}")
+    public void deleteBook(@PathVariable("bookId") int bookId){
+        this.bookService.deleteBook(bookId);
+
     }
 
     //update book
     @PutMapping("/books/{bookid}")
-    public  Book updateBook(@RequestBody Book book ,@PathVariable("/bookid") int bookid){
+    public  Book updateBook(@RequestBody Book book ,@PathVariable("bookid") int bookid){
         this.bookService.updateBook(book,bookid);
         return book;
 
