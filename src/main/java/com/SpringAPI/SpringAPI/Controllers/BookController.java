@@ -30,7 +30,7 @@ public class BookController {
         return bookService.getBookById(id);
     }
 
-    //craete new book
+    //create new book
     @PostMapping("/books")
            public Book addBook(@RequestBody Book book){
         Book b =this.bookService.addBook(book);
