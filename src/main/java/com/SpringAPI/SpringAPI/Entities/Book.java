@@ -1,6 +1,14 @@
 package com.SpringAPI.SpringAPI.Entities;
 
+import net.bytebuddy.dynamic.loading.InjectionClassLoader;
+
+import javax.persistence.*;
+
+@Entity
+@Table(name = "Book")
 public class Book {
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     public int id;
     public  String name;
     public  String author;
