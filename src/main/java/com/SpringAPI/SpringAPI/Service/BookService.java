@@ -38,6 +38,7 @@ public class BookService {
     //delete the book
 
     public void deleteBook(int id){
+
          list=list.stream().filter(book->book.getId()!=id).collect(Collectors.toList());
     }
 
