@@ -36,6 +36,7 @@ public class BookController {
         Book b =this.bookService.addBook(book);
         return book;
     }
+
     //delete book
     @DeleteMapping("/books/{bookId}")
     public void deleteBook(@PathVariable("bookId") int bookId){
