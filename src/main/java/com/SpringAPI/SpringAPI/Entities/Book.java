@@ -10,7 +10,7 @@ public class Book {
     @GeneratedValue(strategy = GenerationType.AUTO)
     public int id;
     public  String name;
-    @OneToOne
+    @OneToOne(cascade = CascadeType.ALL)
     public Author author;
 
     public Book() {

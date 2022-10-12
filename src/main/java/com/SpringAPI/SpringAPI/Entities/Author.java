@@ -1,11 +1,10 @@
 package com.SpringAPI.SpringAPI.Entities;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
+import java.util.jar.Attributes;
 
 @Entity
+
 public class Author {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -13,7 +12,7 @@ public class Author {
     private String firstName;
     private String lastName;
     private String language;
-
+      //private Book book;
     public Author() {
     }
 
