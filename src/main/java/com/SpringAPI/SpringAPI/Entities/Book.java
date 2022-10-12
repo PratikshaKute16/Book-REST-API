@@ -1,7 +1,5 @@
 package com.SpringAPI.SpringAPI.Entities;
 
-import net.bytebuddy.dynamic.loading.InjectionClassLoader;
-
 import javax.persistence.*;
 
 @Entity
@@ -12,15 +10,16 @@ public class Book {
     @GeneratedValue(strategy = GenerationType.AUTO)
     public int id;
     public  String name;
-    public  String author;
+    public Author author;
 
-    public Book(int id, String name, String author) {
+    public Book() {
+
+    }
+
+    public Book(int id, String name, Author author) {
         this.id = id;
         this.name = name;
         this.author = author;
-    }
-
-    public Book() {
     }
 
     public int getId() {
@@ -39,11 +38,11 @@ public class Book {
         this.name = name;
     }
 
-    public String getAuthor() {
+    public Author getAuthor() {
         return author;
     }
 
-    public void setAuthor(String author) {
+    public void setAuthor(Author author) {
         this.author = author;
     }
 
@@ -52,7 +51,7 @@ public class Book {
         return "Book{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
-                ", author='" + author + '\'' +
+                ", author=" + author +
                 '}';
     }
 }
