@@ -1,5 +1,7 @@
 package com.SpringAPI.SpringAPI.Entities;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+
 import javax.persistence.*;
 
 @Entity
@@ -10,6 +12,7 @@ public class Book {
     @GeneratedValue(strategy = GenerationType.AUTO)
     public int id;
     public  String name;
+    @JsonManagedReference
     @OneToOne(cascade = CascadeType.ALL)
     public Author author;
 
