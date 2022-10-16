@@ -1,6 +1,7 @@
 package com.SpringAPI.SpringAPI.Controllers;
 
 import org.apache.tomcat.util.http.fileupload.FileUpload;
+import org.apache.tomcat.util.http.fileupload.RequestContext;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -15,7 +16,7 @@ public class FileUploadController {
     private FileUpload fileUpload;
 
     @PostMapping("/upload-file")
-    public ResponseEntity<String> uploadFile(@RequestParam("image")MultipartFile file){
+    public ResponseEntity<String> uploadFile(@RequestParam("image") MultipartFile file){
 //        System.out.println(file.getOriginalFilename());
 //        System.out.println(file.getSize());
 //        System.out.println(file.getContentType());
@@ -31,7 +32,7 @@ public class FileUploadController {
             }
 
             //file upload code
-            boolean f = FileUpload.uploadFile(file);
+            boolean f = fileUpload. uploadFile(file);
             if(f){
                return ResponseEntity.ok("File Uploaded");
            }
