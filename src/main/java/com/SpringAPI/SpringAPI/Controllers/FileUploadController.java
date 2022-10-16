@@ -1,7 +1,7 @@
 package com.SpringAPI.SpringAPI.Controllers;
 
-import org.apache.tomcat.util.http.fileupload.FileUpload;
-import org.apache.tomcat.util.http.fileupload.RequestContext;
+
+import com.SpringAPI.SpringAPI.Helper.FileUpload;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
